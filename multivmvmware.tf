@@ -39,7 +39,7 @@ resource "vsphere_virtual_machine" "vm" {
   folder               = "dev_zone"
   num_cpus = 2
   memory   = 1024
-  guest_id             = "${data.vsphere_virtual_machine.template.guest_id}"
+  guest_id             = "ubuntu16"
 
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
